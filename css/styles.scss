@@ -1,0 +1,118 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-Dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+// HEADER
+header{
+    text-align: center;
+    h1{
+        line-height: 43px;
+    }
+}
+.title{
+    color: var(--very-Dark-blue);
+}
+.subtitle{
+    line-height: 25px;
+    width: 35%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.light{
+    font-weight: 200;
+}
+.bold{
+    font-weight: 600;
+}
+.soft{
+    color: var(--grayish-blue);
+    font-weight: 400;
+}
+
+
+// BODY
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: white;
+    border: solid 0.5px rgba(0, 0, 0, 0.096);
+    width: 340px;
+    height: 230px;
+    border-radius: 4px;
+    margin: 0 30px;
+    box-shadow: 0px 5px 12px -8px var(--grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    overflow: hidden;
+
+    &-text-title{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    &-text-sentence{
+        line-height: 25px;
+        font-size: 13px;
+    }
+}
+// COLOR BORDERS
+.red-top{
+    border-top: solid 5px var(--red);
+}
+.cyan-top{
+    border-top: solid 5px var(--cyan);
+}
+.yellow-top{
+    border-top: solid 5px var(--orange);
+}
+.blue-top{
+    border-top: solid 5px var(--blue);
+}
+.col{
+    margin: 30px 0;
+}
+.card-image{
+    display: flex;
+    flex-direction: row-reverse;
+    &-cont{
+        width: 55px;
+        height: 55px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .flex{
+        flex-direction: column;
+    }
+    .subtitle{
+        width: 85%;
+        margin-bottom: 70px;
+    }
+    header h1{
+        font-size: 25px;
+    }
+    .card{
+        width: 320px;
+    }
+}
